@@ -22,3 +22,6 @@ for subject in tqdm(list(maskPath.iterdir()), desc='mask photos'):
             'image': image,
             'mask': 1
              }, ignore_index=True)
+dfName = 'covid-mask-detector/data/mask_df.csv'
+print(f'saving Dataframe to: {dfName}')
+maskDF.to_csv(dfName)
