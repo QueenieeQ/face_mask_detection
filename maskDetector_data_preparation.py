@@ -1,6 +1,7 @@
 # update dependency
 from pathlib import Path
 
+inport cv2
 import pandas as pd
 # from google_drive_downloader import GoogleDriveDownloader as gdd
 from tqdm import tqdm
