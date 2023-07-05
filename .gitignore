@@ -1,4 +1,5 @@
 *.csv
 /.cache
 .cache/
+/.hypothesis
 self-built-masked-face-recognition-dataset/
