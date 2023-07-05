@@ -13,7 +13,7 @@ from tqdm import tqdm
 # delete zip file
 # datasetPath.unlink()
 
-datasetPath = Path('/mnt/ssd_ext/phongphu/nxq/self-built-masked-face-recognition-dataset')
+datasetPath = Path('/mnt/ssd_ext/phongphu/nxq/face_mask_detection/self-built-masked-face-recognition-dataset')
 maskPath = datasetPath/'AFDB_masked_face_dataset'
 nonMaskPath = datasetPath/'AFDB_face_dataset'
 maskDF = pd.DataFrame()
@@ -35,4 +35,4 @@ for subject in tqdm(list(nonMaskPath.iterdir()), desc='non mask photos'):
 
 dfName = 'covid-mask-detector/data/mask_df.csv'
 print(f'saving Dataframe to: {dfName}')
-maskDF.to_csv(dfName)
+maskDF.to_csv(dfName, encoding='utf-8', errors='replace')
