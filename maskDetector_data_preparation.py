@@ -16,7 +16,8 @@ from tqdm import tqdm
 datasetPath = Path('/mnt/ssd_ext/phongphu/nxq/self-built-masked-face-recognition-dataset')
 maskPath = datasetPath/'AFDB_masked_face_dataset'
 nonMaskPath = datasetPath/'AFDB_face_dataset'
-maskDF = pd.concat()
+maskDF = pd.DataFrame()
+# change from pandas 2.0.3 back to 1.4
 
 for subject in tqdm(list(maskPath.iterdir()), desc='mask photos'):
     for imgPath in subject.iterdir():
