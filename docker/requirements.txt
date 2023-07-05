@@ -1,2 +1,6 @@
 pandas
 plotly
+torch
+lightning
+pytorch-lightning
+torchmetrics
